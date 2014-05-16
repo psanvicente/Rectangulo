@@ -1,45 +1,54 @@
-
 package rectanguloNavidad;
 
+/**
+ * Represents a rectangle and contains method to change and checks its dimensions
+ * @author Pablo Sanchez Sanvicente
+ * @version 1.0
+ */
 class Rectangulo {
-	
+	/** Rectangle height*/
 	int h;
-	
+	/** Rectangle width*/
 	int b;
 
+	/**
+	 * Constructor. Set height to 2 and base to 1
+	 */
 	Rectangulo() {
 		h = 2;
 		b = 1;
-	}
+	}//Rectangulo
 
-	
+	/**
+	 * Increases width in 1 unit
+	 */
 	void engordar() {
 		b += 1;
 		System.out.println("Se ha aumentado la base");
-	}
+	}//engordar
 
+	/**
+	 * Decreases width in 1 unit if it is bigger than a minimal size
+	 */
 	void adelgazar() {
-		if (!esBaseMinima()) // Solo si la base es mayor de 1 nos
-								// permitirá reducirla.
+		if (!esBaseMinima())
 		{
 			b--;
 			System.out.println("Se ha disminuido la base");
 		} else
-			// en caso de no ser mayor de 1, no sale el
-			// mensaje en pantalla
 			System.out.println("No se puede reducir mas la base");
-	}
+	}//adelgazar
 
 	/**
-	 * Metodo para hacer crecer la altura del rectangulo
+	 * Increases height in 1 unit
 	 */
 	void crecer() {
 		h++;
 		System.out.println("Se ha aumentado la altura");
-	}
+	}//crecer
 
 	/**
-	 * Metodo para hacer decrecer la altura del rectangulo
+	 * Decreases height if it is bigger than a minimal size
 	 */
 	void decrecer() {
 		if (esAlturaMinima())
@@ -48,41 +57,46 @@ class Rectangulo {
 			h--;
 			System.out.println("Se ha disminuido la altura");
 			if (esAlturaMinima())
-				System.out.println("HE LLEGADO AL MÍNIMO DE ALTURA");
+				System.out.println("HE LLEGADO AL Mï¿½NIMO DE ALTURA");
 		}
-
-	}
+	}//decrecer
 
 	/**
-	 * Metodo booleano para comprobar si nuestro objeto rectángulo es en
-	 * realidad un cuadrado.
-	 * 
-	 * @return devuelve verdadero si es un cuadrado, false si es un rectangulo
+	 * Checks if the figure is really a square
+	 * @return true if it is a square, false if not
 	 */
 	boolean esCuadrado() {
 		if (h == b)
 			return true;
 		else
 			return false;
-	}
+	}//esCuadrado
 
-	
+	/**
+	 * Checks if its height is less than 2
+	 * @return true if it is less than 2
+	 */
 	boolean esAlturaMinima() {
 		if (h < 2)
 			return true;
 		else
 			return false;
+	}//esAlturaMinima
 
-	}
-
+	/**
+	 * Checks if its base is less than 2
+	 * @return true if it is less than 2, false if it is higher
+	 */
 	boolean esBaseMinima() {
 		if (b < 2)
 			return true;
 		else
 			return false;
+	}//esBaseMinima
 
-	}
-
+	/**
+	 * Prints a picture representing the rectangle
+	 */
 	void mostrarDibujo() {
 		System.out.print("**");
 		for (int i = 0; i < b; i++)
@@ -102,5 +116,6 @@ class Rectangulo {
 			System.out.println(" Es un cuadrado de " + (b * h) + " m2.\n");
 		else
 			System.out.println(" Es un rectangulo de " + (b * h) + " m2.\n");
-	}// dibujo
-}// clase
+	}//mostrarDibujo
+	
+}//Rectangulo

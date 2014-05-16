@@ -5,13 +5,16 @@ package utiles;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/**
-* Permite lectura desde teclado
+/**Contains method to read integers, lines and characters from keyboard
+ * @version 1.0
+ * @author lmg
 */
 public class Teclado {
+
 	/**
-	* Lee una cadena desde el teclado
-	*/
+	 * Reads a line from keyboard and returns it
+	 * @return read line
+	 */
 	public static String leerCadena() {
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		String cadena;
@@ -21,11 +24,13 @@ public class Teclado {
 			cadena = "";
 		}
 		return cadena;
-	}
+	}//leerCadena
 
 	/**
-	* Lee un car?cter desde el teclado
-	*/
+	 * Reads a character from keyboard and returns it. If an exception is thrown,<br/>
+	 * the character returned will hold the value '0'
+	 * @return read character
+	 */
 	 public static char leerCaracter() {
 		char caracter;
 		try {
@@ -34,11 +39,13 @@ public class Teclado {
 			caracter = 0;
 		}
 		return caracter;
-	}
+	}//leerCaracter
 	
-	/**
-	* Lee un entero desde el teclado
-	*/
+	 /**
+	 * Reads an integer from keyboard and returns it. If an exception is thrown,<br/>
+	 * the value returned will be '0'
+	 * @return read integer
+	 */
 	public static int leerEntero() {
 	
 		int x;
@@ -48,5 +55,5 @@ public class Teclado {
 			x = 0;
 		}
 		return x;
-	}
-}
+	}//leerEntero
+}//Teclado
