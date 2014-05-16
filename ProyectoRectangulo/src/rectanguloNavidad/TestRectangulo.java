@@ -1,10 +1,17 @@
 package rectanguloNavidad;
 
-
+/**
+ * Contains a method that creates a Rectangulo object and calls its methods
+ * @author Pablo Sanchez Sanvicente
+ * @version 1.0
+ */
 public class TestRectangulo {
 
+	/**
+	 * Performs operation over a Rectangulo object to show its behaviour
+	 * @param args Array of String
+	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Rectangulo rectangulo = new Rectangulo();
 
 		rectangulo.adelgazar();
@@ -22,7 +29,6 @@ public class TestRectangulo {
 		rectangulo.adelgazar();
 
 		rectangulo.mostrarDibujo();
+	}//main
 
-	}
-
-}
+}//TestRectangulo
